@@ -1,5 +1,5 @@
-class Shelter
-  attr_accessor: :species, :name, :breed, :gender, :timestamp, :id
+class Animal
+  attr_accessor :species, :name, :breed, :gender, :timestamp, :owner_id, :id
 
   def initialize(attr)
     @species = attr.fetch(:species)
@@ -7,7 +7,8 @@ class Shelter
     @breed = attr.fetch(:breed)
     @gender = attr.fetch(:gender)
     @timestamp = attr.fetch(:time)
-    @id = attr.fetch(:id)
+    @owner_id = attr.fetch(:owner)
   end
+
 
 end

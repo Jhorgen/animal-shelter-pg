@@ -1,0 +1,12 @@
+<h1>Customers </h1>
+<% if @customers.any?%>
+  <ul>
+    <% @customers.each do |customer| %>
+    <li><%= customer.fetch("name") %></li>
+    <% end %>
+  </ul>
+<% else %>
+  There are no customers yet
+<% end %>
+<br><br>
+<a href="/customers/new" >Add a new customer </a>
